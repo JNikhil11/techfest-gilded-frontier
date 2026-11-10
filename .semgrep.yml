@@ -1,0 +1,23 @@
+rules:
+  - id: ban-3d-webgl-imports
+    patterns:
+      - pattern-either:
+          - pattern: import ... from "three"
+          - pattern: import ... from "@react-three/fiber"
+          - pattern: import ... from "@react-three/drei"
+          - pattern: import ... from "ogl"
+    message: "NON-NEGOTIABLE VIOLATION: 3D assets and WebGL 3D libraries are strictly forbidden in ILP."
+    languages: [typescript, javascript]
+    severity: ERROR
+
+  - id: ban-pseudo-technical-clutter
+    pattern-regex: "(SYS\\.ACTIVE|SYSTEM ONLINE|SIGNAL \\d+%|0[1-9]\\s*//\\s*[A-Z]{3,})"
+    message: "MISTAKE #2 REGRESSION: Pseudo-technical HUD annotations and '01 //' numbering are strictly banned."
+    languages: [typescript, javascript, generic]
+    severity: ERROR
+
+  - id: ban-dead-anchor-links
+    pattern-regex: 'href=["''](#|javascript:void\\(0\\))["'']'
+    message: "FUNCTIONAL VIOLATION: Dead placeholder links (href='#') are forbidden. Use real section IDs or verified https://techfest.org URLs."
+    languages: [typescript, javascript, html]
+    severity: ERROR

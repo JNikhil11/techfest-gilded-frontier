@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FFFEFC"/>
+      <stop offset="60%" stop-color="#FAF8F2"/>
+      <stop offset="100%" stop-color="#F5F0E4"/>
+    </linearGradient>
+    <linearGradient id="goldText" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#7A5B1E"/>
+      <stop offset="28%" stop-color="#99752D"/>
+      <stop offset="50%" stop-color="#C6A04A"/>
+      <stop offset="74%" stop-color="#99752D"/>
+      <stop offset="100%" stop-color="#7A5B1E"/>
+    </linearGradient>
+    <radialGradient id="aura" cx="50%" cy="40%" r="50%">
+      <stop offset="0%" stop-color="rgba(244, 233, 203, 0.6)"/>
+      <stop offset="50%" stop-color="rgba(230, 210, 163, 0.18)"/>
+      <stop offset="100%" stop-color="rgba(255, 254, 252, 0)"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="600" cy="260" r="450" fill="url(#aura)"/>
+  <!-- Astrolabe Ring Background -->
+  <circle cx="600" cy="280" r="220" stroke="#E6D2A3" stroke-width="1.5" stroke-dasharray="4 8" fill="none"/>
+  <circle cx="600" cy="280" r="160" stroke="#C6A04A" stroke-width="1" fill="none"/>
+  <!-- Text Elements -->
+  <text x="600" y="160" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif" font-size="16" font-weight="700" letter-spacing="4" fill="#99752D">INDIAN INSTITUTE OF TECHNOLOGY BOMBAY • 30TH EDITION</text>
+  <text x="600" y="270" text-anchor="middle" font-family="'Cormorant Garamond', Georgia, serif" font-size="76" font-weight="600" fill="#24221E">Where Science Enters</text>
+  <text x="600" y="350" text-anchor="middle" font-family="'Cormorant Garamond', Georgia, serif" font-size="82" font-style="italic" font-weight="600" fill="url(#goldText)">The Gilded Frontier.</text>
+  <text x="600" y="420" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif" font-size="22" font-weight="500" fill="#5C584F">Asia's Largest Science &amp; Technology Festival • December 16–18, 2026</text>
+  <!-- Badges / Pillars -->
+  <text x="600" y="520" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif" font-size="15" font-weight="600" letter-spacing="2" fill="#77736A">COMPETITIONS  •  WORKSHOPS  •  INTERNATIONAL SUMMIT  •  ROBOWARS  •  TWMUN</text>
+</svg>

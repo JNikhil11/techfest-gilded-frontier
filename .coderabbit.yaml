@@ -1,0 +1,21 @@
+language: "en-US"
+early_access: false
+reviews:
+  profile: "assertive"
+  request_changes_workflow: true
+  high_level_summary: true
+  poem: false
+  review_status: true
+  collapse_walkthrough: false
+  path_instructions:
+    - path: "src/**"
+      instructions: |
+        Enforce "The Gilded Frontier" design and architecture rules:
+        1. Reject any import or usage of 3D libraries (three, @react-three/fiber, webgl 3D, .glb, .gltf).
+        2. Reject any dark-mode full-page black backgrounds; primary surfaces must use #FFFEFC and #FAF8F2.
+        3. Reject any pseudo-technical HUD labels like "01 //", "SYS.ACTIVE", "SYSTEM ONLINE", or floating chapter dot rails.
+        4. Reject any fake forms or dummy href="#" links; all CTAs must point to verified https://techfest.org or https://ca.techfest.org routes.
+        5. Verify that all external target="_blank" links include rel="noopener noreferrer".
+        6. Verify that Canvas and GSAP animations respect prefers-reduced-motion and clean up listeners on unmount.
+chat:
+  auto_reply: true

@@ -1,0 +1,73 @@
+:root {
+  /* Primary Surfaces — Luminous White & Warm Ivory */
+  --bg-porcelain: #FFFEFC;          /* Main page background */
+  --bg-ivory: #FAF8F2;              /* Alternate editorial section surface */
+  --bg-ivory-elevated: #F5F0E4;     /* Interactive card hover & ledger highlight surface */
+  --bg-glass-porcelain: rgba(255, 254, 252, 0.88);
+
+  /* Metallic Gold Material Spectrum */
+  --gold-champagne: #E6D2A3;        /* Soft structural borders & subtle accents */
+  --gold-metallic: #C6A04A;         /* Primary metallic gold highlight */
+  --gold-deep: #99752D;             /* High-contrast accessible gold for text/icons on white */
+  --gold-burnished: #7A5B1E;        /* Deep antique bronze-gold for active states & badges */
+  --gold-pale-glow: #F4E9CB;        /* Soft radial illumination surface */
+  --gold-specular: #FFFDF7;         /* Specular peak inside metallic gradients */
+
+  /* Editorial Ink Typography */
+  --ink-charcoal: #24221E;          /* Primary display & body typography (Contrast 15.6:1 on porcelain) */
+  --ink-secondary: #5C584F;         /* Lead paragraphs & secondary labels (Contrast 7.1:1 on porcelain) */
+  --ink-warm-grey: #77736A;         /* Metadata, captions & muted details (Contrast 4.65:1 on porcelain) */
+
+  /* Semantic Status Accents (Harmonized with Warm Editorial Palette) */
+  --status-open-bg: #EEF6F0;
+  --status-open-text: #1E5E3A;
+  --status-open-border: rgba(30, 94, 58, 0.25);
+  --status-closed-bg: #F3F0EA;
+  --status-closed-text: #6E685F;
+  --status-closed-border: rgba(110, 104, 95, 0.25);
+
+  /* Multi-Stop Metallic Gold Gradients (Physical Foil Simulation) */
+  --gradient-gold-foil: linear-gradient(
+    115deg,
+    #99752D 0%,
+    #C6A04A 22%,
+    #E6D2A3 45%,
+    #FFFDF7 52%,
+    #E6D2A3 60%,
+    #C6A04A 82%,
+    #99752D 100%
+  );
+
+  --gradient-gold-text: linear-gradient(
+    102deg,
+    #7A5B1E 0%,
+    #99752D 28%,
+    #C6A04A 50%,
+    #99752D 74%,
+    #7A5B1E 100%
+  );
+
+  --gradient-ambient-aura: radial-gradient(
+    circle at 50% 35%,
+    rgba(244, 233, 203, 0.55) 0%,
+    rgba(230, 210, 163, 0.18) 42%,
+    rgba(255, 254, 252, 0) 72%
+  );
+
+  /* Hairlines & Elevation Shadows */
+  --border-hairline: 1px solid rgba(198, 160, 74, 0.26);
+  --border-hairline-strong: 1px solid rgba(153, 117, 45, 0.48);
+  --shadow-editorial-card: 0 12px 36px -8px rgba(36, 34, 30, 0.05), 0 2px 6px -1px rgba(153, 117, 45, 0.06);
+  --shadow-gold-glow: 0 8px 28px -4px rgba(198, 160, 74, 0.28);
+
+  /* Motion Easing Curves */
+  --ease-editorial-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-metallic-shimmer: cubic-bezier(0.4, 0, 0.2, 1);
+  --duration-fast: 220ms;
+  --duration-base: 420ms;
+  --duration-reveal: 750ms;
+
+  /* Typography Font Families */
+  --font-serif: 'Cormorant Garamond', Georgia, serif;
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+}

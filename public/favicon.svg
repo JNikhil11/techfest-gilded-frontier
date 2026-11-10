@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <defs>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#99752D"/>
+      <stop offset="50%" stop-color="#E6D2A3"/>
+      <stop offset="100%" stop-color="#C6A04A"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="14" fill="#FFFEFC"/>
+  <circle cx="32" cy="32" r="28" stroke="url(#gold)" stroke-width="1.5" stroke-dasharray="3 3"/>
+  <circle cx="32" cy="32" r="22" stroke="url(#gold)" stroke-width="1"/>
+  <!-- Central Astrolabe Compass and 30th Glyph -->
+  <path d="M32 14L34.5 29.5L48 32L34.5 34.5L32 50L29.5 34.5L16 32L29.5 29.5Z" fill="url(#gold)"/>
+  <circle cx="32" cy="32" r="4" fill="#24221E"/>
+</svg>
