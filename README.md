@@ -21,11 +21,11 @@ The official landing page for **Techfest, IIT Bombay — 30th Edition (December 
 - **Dates:** December 16–18, 2026 (Accommodation: Dec 15, 6 AM – Dec 19, 10 AM IST; TWMUN: Dec 17–18, 2026).
 - **Venue:** Indian Institute of Technology Bombay (Powai, Mumbai, Maharashtra 400076).
 - **Scale:** 1,80,000+ Footfall, 35,000+ Competitors, 20+ Participating Countries.
-- **Competitions (12 Verified Tracks):** Meshmerize (₹1,00,000), ZeroCode (₹1,00,000, 70-min Gemini Flash sprint), Autonomous AI Agents (₹3,00,000), Aeromodelling (₹1,50,000), AyushTech AI (₹1,00,000), TrueForge VS Code Agent (₹1,00,000), MeitY Cycloidal Rotor Drone (₹25,50,000), MeitY Forensics (₹25,50,000), etc.
+- **Competitions (12 Verified Tracks):** Meshmerize (₹1,00,000), ZeroCode (₹80,000, 70-min Gemini Flash sprint), Autonomous AI Agents (₹3,00,000), Aeromodelling (₹1,00,000), AyushTech AI (₹1,00,000), TrueForge VS Code Agent (₹1,00,000), MeitY Cycloidal Rotor Drone (₹25,50,000), MeitY Forensics (₹25,50,000), etc.
 - **Workshops (20 Verified Tracks):** Dual-Certificate Combos (AI+ML, Drone+Robotics, Deep Learning+ML, etc.) and individual tracks with 3 official guarantees: Professional IIT Bombay Certificate, Free All-Access Pass (EDM, Robowars, Keynotes), and Internship opportunities.
 - **International Summit:** Associate Partner CoinDCX, Powered by Juspay, Early Bird ₹999.
 - **International Robowars:** 4 weight categories (8kg, 15kg, 30kg, 60kg).
-- **On-Campus Accommodation:** ₹3,599 for 4D/4N inside IIT Bombay campus with interactive group discount calculator.
+- **On-Campus Accommodation:** ₹3,999 (reduced from ₹4,499) for 4D/4N inside IIT Bombay campus with interactive group discount calculator.
 
 ---
 

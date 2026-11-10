@@ -13,7 +13,7 @@ export const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 lg:gap-8 pb-12 border-b border-[rgba(198,160,74,0.2)]">
           {/* Col 1 & 2: Brand & Institution */}
           <div className="lg:col-span-2 space-y-5">
-            <div className="flex items-center gap-4">
+            <div className="flex flex-wrap items-center gap-3.5">
               <img
                 src="/iitb-logo.png"
                 alt="IIT Bombay Logo"
@@ -22,18 +22,14 @@ export const Footer: React.FC = () => {
                 height={56}
               />
               <div className="h-10 w-[1px] bg-[rgba(198,160,74,0.35)]" />
-              <div className="flex flex-col">
-                <div className="flex items-center gap-2">
-                  <span className="font-serif text-2xl font-bold tracking-tight text-[#24221E]">
-                    TECHFEST
-                  </span>
-                  <span className="text-xs font-semibold px-2 py-0.5 bg-[#FFFEFC] border border-[#C6A04A]/50 rounded text-[#7A5B1E]">
-                    30TH EDITION
-                  </span>
-                </div>
-                <span className="text-xs tracking-wider text-[#7A5B1E] uppercase font-semibold">
-                  Indian Institute of Technology Bombay
-                </span>
+              <div className="px-3 py-1.5 bg-[#24221E] rounded-lg border border-[rgba(198,160,74,0.35)] shadow-xs">
+                <img
+                  src="/techfest-logo.png"
+                  alt="Techfest Official Logo"
+                  className="h-6 w-auto object-contain"
+                  width={120}
+                  height={24}
+                />
               </div>
             </div>
 

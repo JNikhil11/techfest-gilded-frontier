@@ -17,7 +17,7 @@ export const Navbar: React.FC = () => {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 h-[68px] bg-[rgba(255,254,252,0.88)] backdrop-blur-md border-b border-[rgba(198,160,74,0.22)] transition-all">
       <div className="max-w-[1440px] mx-auto h-full px-4 sm:px-6 lg:px-8 flex items-center justify-between">
-        {/* Brand Lockup: IITB Crest + Techfest Official Logo */}
+        {/* Brand Lockup: IITB Crest + Techfest Official Logo Medallion */}
         <a
           href="#top"
           className="flex items-center gap-3 group focus-visible:outline-2 focus-visible:outline-[#C6A04A]"
@@ -31,17 +31,21 @@ export const Navbar: React.FC = () => {
             height={40}
           />
           <div className="h-6 w-[1px] bg-[rgba(198,160,74,0.3)] hidden sm:block" />
-          <div className="flex flex-col">
-            <div className="flex items-center gap-1.5">
-              <span className="font-sans font-bold text-base tracking-wider text-[#24221E] group-hover:text-[#99752D] transition-colors">
-                TECHFEST
-              </span>
-              <span className="text-[10px] font-bold px-1.5 py-0.5 bg-[#FAF8F2] border border-[#C6A04A]/40 rounded text-[#7A5B1E]">
-                30TH
-              </span>
-            </div>
-            <span className="text-[10px] tracking-widest text-[#7A5B1E] uppercase font-semibold">
-              IIT Bombay • 2026–27
+          <div className="hidden sm:flex items-center px-2 py-1 bg-[#24221E] rounded-md border border-[rgba(198,160,74,0.35)] shadow-xs">
+            <img
+              src="/techfest-logo.png"
+              alt="Techfest 2026 Official Logo"
+              className="h-4.5 w-auto object-contain"
+              width={100}
+              height={18}
+            />
+          </div>
+          <div className="flex flex-col sm:hidden">
+            <span className="font-sans font-bold text-sm tracking-wider text-[#24221E]">
+              TECHFEST
+            </span>
+            <span className="text-[9px] tracking-widest text-[#7A5B1E] uppercase font-semibold">
+              IIT Bombay • 30th
             </span>
           </div>
         </a>
@@ -97,6 +101,21 @@ export const Navbar: React.FC = () => {
       {mobileMenuOpen && (
         <div className="lg:hidden bg-[#FFFEFC] border-b border-[rgba(198,160,74,0.3)] shadow-lg animate-in slide-in-from-top duration-300">
           <div className="px-6 py-6 space-y-4">
+            <div className="flex items-center gap-3 pb-3 border-b border-[rgba(198,160,74,0.15)]">
+              <div className="px-2 py-1 bg-[#24221E] rounded-md border border-[rgba(198,160,74,0.35)]">
+                <img
+                  src="/techfest-logo.png"
+                  alt="Techfest 2026 Logo"
+                  className="h-4.5 w-auto object-contain"
+                  width={100}
+                  height={18}
+                />
+              </div>
+              <span className="text-xs font-bold text-[#7A5B1E] uppercase">
+                30th Edition • IIT Bombay
+              </span>
+            </div>
+
             <div className="grid grid-cols-2 gap-3 pb-3 border-b border-[rgba(198,160,74,0.15)]">
               {navLinks.map((link) => (
                 <a
@@ -135,4 +154,3 @@ export const Navbar: React.FC = () => {
     </header>
   );
 };
-

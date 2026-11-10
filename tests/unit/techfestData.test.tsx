@@ -34,9 +34,13 @@ describe('Verified Factual Corpus & Data Dictionary Integrity', () => {
 
     const zeroCode = VERIFIED_COMPETITIONS.find((c) => c.id === 'zero-code');
     expect(zeroCode).toBeDefined();
-    expect(zeroCode?.prizePool).toBe('INR 1,00,000');
+    expect(zeroCode?.prizePool).toBe('INR 80,000');
     expect(zeroCode?.scoringOrRulesSummary).toContain('Core Feature Completion');
     expect(zeroCode?.contactPerson?.name).toBe('Siddhi Jain');
+
+    const aeromodelling = VERIFIED_COMPETITIONS.find((c) => c.id === 'national-aeromodelling');
+    expect(aeromodelling).toBeDefined();
+    expect(aeromodelling?.prizePool).toBe('INR 1,00,000');
   });
 
   it('contains exactly 20 verified workshops with currentPrice < originalPrice', () => {
@@ -61,7 +65,7 @@ describe('Verified Factual Corpus & Data Dictionary Integrity', () => {
     expect(TECHFEST_METADATA.venue.institution).toContain('IIT Bombay');
     expect(TECHFEST_METADATA.dates.finalsDisplay).toBe('December 16–18, 2026');
     expect(SPECIAL_EXPERIENCES_DATA.summit.earlyBirdPriceINR).toBe(999);
-    expect(SPECIAL_EXPERIENCES_DATA.accommodation.discountedFeeINR).toBe(3599);
+    expect(SPECIAL_EXPERIENCES_DATA.accommodation.discountedFeeINR).toBe(3999);
   });
 });
 

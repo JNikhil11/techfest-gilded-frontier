@@ -28,7 +28,7 @@ export const FinalCtaSection: React.FC = () => {
     },
     {
       title: 'Campus Accommodation',
-      desc: '4 Days & 4 Nights inside IIT Bombay student hostels starting at ₹3,599.',
+      desc: '4 Days & 4 Nights inside IIT Bombay student hostels starting at ₹3,999.',
       url: 'https://techfest.org/accommodation',
       cta: 'Reserve Hostel Stay',
       icon: <Bed size={20} className="text-[#99752D]" />,
@@ -36,7 +36,7 @@ export const FinalCtaSection: React.FC = () => {
   ];
 
   return (
-    <section className="relative py-28 bg-[#FAF8F2] border-t border-[rgba(198,160,74,0.3)] overflow-hidden">
+    <section id="final-cta" className="relative py-28 bg-[#FAF8F2] border-t border-[rgba(198,160,74,0.3)] overflow-hidden">
       {/* Delicate Gold Sparkle Canvas */}
       <GoldSparkleCanvas density="dense" />
 

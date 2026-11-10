@@ -31,11 +31,13 @@ export const App: React.FC = () => {
         <SummitAndLeadershipSection />
         <RobowarsAndExhibitionsSection />
         <VenueAndStaySection />
-        <FinalCtaSection />
       </main>
 
-      {/* Editorial Broadside Footer */}
-      <Footer />
+      {/* Final CTA and Editorial Broadside Footer */}
+      <div id="final-cta-and-footer">
+        <FinalCtaSection />
+        <Footer />
+      </div>
     </div>
   );
 };

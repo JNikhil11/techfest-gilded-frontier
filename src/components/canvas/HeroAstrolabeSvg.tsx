@@ -208,7 +208,7 @@ export const HeroAstrolabeSvg: React.FC<HeroAstrolabeSvgProps> = ({ className = 
           fill="#99752D"
           fontFamily="system-ui, sans-serif"
         >
-          DECEMBER 16–18, 2026
+          AN AETHERIAL RENAISSANCE • 2026
         </text>
       </svg>
     </div>

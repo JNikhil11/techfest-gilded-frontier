@@ -58,6 +58,7 @@ test.describe('TECHFEST IIT BOMBAY — THE GILDED FRONTIER E2E VERIFICATION', ()
     await expect(compSection).toContainText('Meshmerize');
     await expect(compSection).toContainText('ZeroCode');
     await expect(compSection).toContainText('INR 1,00,000');
+    await expect(compSection).toContainText('INR 80,000');
 
     // Filter by Aerospace & DeepTech
     await compSection.getByRole('button', { name: /Aerospace & DeepTech/i }).click();

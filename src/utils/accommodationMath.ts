@@ -9,14 +9,15 @@ export interface AccommodationQuote {
   tierLabel: string;
 }
 
-export const BASE_ACCOMMODATION_RATE = 3599;
+// Current verified accommodation fee: ₹3,999 (reduced from ₹4,499)
+export const BASE_ACCOMMODATION_RATE = 3999;
 export const ORIGINAL_ACCOMMODATION_RATE = 4499;
 
 /**
  * Computes official Techfest accommodation quote based on verified group rules:
- * - 1 to 4 persons: ₹3,599 / person
- * - 5 to 12 persons: Flat ₹150 off per person (₹3,449 / person)
- * - 13 to 20 persons: Flat ₹300 off per person (₹3,299 / person)
+ * - 1 to 4 persons: ₹3,999 / person
+ * - 5 to 12 persons: Flat ₹150 off per person (₹3,849 / person)
+ * - 13 to 20 persons: Flat ₹300 off per person (₹3,699 / person)
  * - Min group size: 1, Max group size: 20
  */
 export function calculateAccommodationQuote(guestsInput: number): AccommodationQuote {
@@ -48,4 +49,3 @@ export function calculateAccommodationQuote(guestsInput: number): AccommodationQ
     tierLabel,
   };
 }
-

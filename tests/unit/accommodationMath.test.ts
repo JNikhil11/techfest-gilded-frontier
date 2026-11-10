@@ -6,17 +6,22 @@ import {
 } from '../../src/utils/accommodationMath';
 
 describe('Accommodation Math & Group Discount Tiers', () => {
+  it('verifies current official base rate is ₹3,999 (reduced from ₹4,499)', () => {
+    expect(BASE_ACCOMMODATION_RATE).toBe(3999);
+    expect(ORIGINAL_ACCOMMODATION_RATE).toBe(4499);
+  });
+
   it('applies standard base rate for 1 to 4 individuals (no extra group discount)', () => {
     const single = calculateAccommodationQuote(1);
     expect(single.guests).toBe(1);
-    expect(single.finalRatePerPerson).toBe(BASE_ACCOMMODATION_RATE);
-    expect(single.totalCost).toBe(BASE_ACCOMMODATION_RATE);
+    expect(single.finalRatePerPerson).toBe(3999);
+    expect(single.totalCost).toBe(3999);
     expect(single.discountPerPerson).toBe(0);
 
     const group4 = calculateAccommodationQuote(4);
     expect(group4.guests).toBe(4);
-    expect(group4.finalRatePerPerson).toBe(BASE_ACCOMMODATION_RATE);
-    expect(group4.totalCost).toBe(4 * BASE_ACCOMMODATION_RATE);
+    expect(group4.finalRatePerPerson).toBe(3999);
+    expect(group4.totalCost).toBe(4 * 3999);
     expect(group4.discountPerPerson).toBe(0);
   });
 
@@ -24,8 +29,8 @@ describe('Accommodation Math & Group Discount Tiers', () => {
     const group5 = calculateAccommodationQuote(5);
     expect(group5.guests).toBe(5);
     expect(group5.discountPerPerson).toBe(150);
-    expect(group5.finalRatePerPerson).toBe(BASE_ACCOMMODATION_RATE - 150);
-    expect(group5.totalCost).toBe(5 * (BASE_ACCOMMODATION_RATE - 150));
+    expect(group5.finalRatePerPerson).toBe(3999 - 150);
+    expect(group5.totalCost).toBe(5 * (3999 - 150));
     expect(group5.tierLabel).toContain('> 4 persons');
 
     const group12 = calculateAccommodationQuote(12);
@@ -36,8 +41,8 @@ describe('Accommodation Math & Group Discount Tiers', () => {
     const group13 = calculateAccommodationQuote(13);
     expect(group13.guests).toBe(13);
     expect(group13.discountPerPerson).toBe(300);
-    expect(group13.finalRatePerPerson).toBe(BASE_ACCOMMODATION_RATE - 300);
-    expect(group13.totalCost).toBe(13 * (BASE_ACCOMMODATION_RATE - 300));
+    expect(group13.finalRatePerPerson).toBe(3999 - 300);
+    expect(group13.totalCost).toBe(13 * (3999 - 300));
     expect(group13.tierLabel).toContain('> 12 persons');
   });
 
@@ -52,8 +57,7 @@ describe('Accommodation Math & Group Discount Tiers', () => {
 
   it('correctly calculates total savings against original ₹4,499 rate', () => {
     const quote = calculateAccommodationQuote(10);
-    const expectedSavings = 10 * (ORIGINAL_ACCOMMODATION_RATE - (BASE_ACCOMMODATION_RATE - 150));
+    const expectedSavings = 10 * (ORIGINAL_ACCOMMODATION_RATE - (3999 - 150));
     expect(quote.totalSavings).toBe(expectedSavings);
   });
 });
-
