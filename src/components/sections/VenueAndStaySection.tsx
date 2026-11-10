@@ -3,7 +3,7 @@ import { SPECIAL_EXPERIENCES_DATA, TECHFEST_METADATA } from '../../data/techfest
 import { calculateAccommodationQuote } from '../../utils/accommodationMath';
 import { IstCountdown } from '../ui/IstCountdown';
 import { MagneticButton } from '../ui/MagneticButton';
-import { MapPin, Users, Calendar, ShieldCheck, Phone, Mail, ExternalLink } from 'lucide-react';
+import { MapPin, Users, Calendar, ShieldCheck, Phone, Mail, ExternalLink, CheckCircle } from 'lucide-react';
 
 export const VenueAndStaySection: React.FC = () => {
   const [guests, setGuests] = useState<number>(4);
@@ -22,7 +22,7 @@ export const VenueAndStaySection: React.FC = () => {
             Stay Inside the Historic IIT Bombay Campus.
           </h2>
           <p className="text-lead text-[#5C584F]">
-            Enjoy 4 Days &amp; 4 Nights of accommodation in Powai, Mumbai. Seamless access to student hostels, food avenues, event arenas, and night sessions.
+            Enjoy 4 Days &amp; 4 Nights of verified hostel stay in Powai, Mumbai. Seamless access to student hostels, food avenues, event arenas, and night sessions.
           </p>
         </div>
 
@@ -59,8 +59,18 @@ export const VenueAndStaySection: React.FC = () => {
                 {accommodation.duration}
               </div>
               <p className="text-xs text-[#5C584F] leading-relaxed">
-                Check-in starts Dec 15 at 6:00 AM IST. Check-out concludes Dec 19 at 10:00 AM IST. First-come, first-served allocation across IIT Bombay student hostels.
+                Check-in opens Dec 15 at 6:00 AM IST. Check-out concludes Dec 19 at 10:00 AM IST. Accommodates participants during the 3-day festival (Dec 16–18, 2026).
               </p>
+            </div>
+
+            {/* Official Source Verification Callout */}
+            <div className="p-4 bg-[#EEF6F0] border border-[#1E5E3A]/25 rounded-2xl text-xs space-y-1">
+              <div className="font-bold text-[#1E5E3A] flex items-center gap-1.5">
+                <CheckCircle size={14} /> Official Tariff Verification Notice
+              </div>
+              <div className="text-[#5C584F] leading-relaxed">
+                Tariffs verified directly from <a href="https://techfest.org/accommodation" target="_blank" rel="noopener noreferrer" className="underline font-semibold text-[#1E5E3A]">techfest.org/accommodation</a> (source checked Nov 2026). First-come, first-served allocation across IIT Bombay student hostels.
+              </div>
             </div>
           </div>
 

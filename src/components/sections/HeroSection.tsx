@@ -32,7 +32,7 @@ export const HeroSection: React.FC = () => {
             <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-[#FAF8F2] border border-[rgba(198,160,74,0.4)] shadow-[0_2px_8px_rgba(36,34,30,0.02)]">
               <Sparkles size={14} className="text-[#C6A04A]" />
               <span className="text-[11px] md:text-xs font-semibold tracking-wider text-[#7A5B1E] uppercase">
-                {TECHFEST_METADATA.venue.institution} • {TECHFEST_METADATA.dates.finalsDisplay}
+                {TECHFEST_METADATA.edition} • {TECHFEST_METADATA.officialTheme} • {TECHFEST_METADATA.dates.finalsDisplay}
               </span>
             </div>
 
@@ -45,7 +45,7 @@ export const HeroSection: React.FC = () => {
 
             {/* Editorial Lead Description */}
             <p className="text-lead text-[#5C584F] font-normal leading-relaxed">
-              Experience the landmark 30th Milestone Edition of Asia&apos;s Largest Science and Technology Festival. Three decades of international combat robotics, autonomous AI agent challenges, IIT Bombay certified training, and global keynote conclaves.
+              Experience the 30th Milestone Edition of Asia&apos;s Largest Science and Technology Festival — <em>&ldquo;{TECHFEST_METADATA.officialTheme}&rdquo;</em>. Three days of international combat robotics, autonomous AI agent challenges, IIT Bombay certified workshops, and global keynote conclaves at Powai, Mumbai.
             </p>
 
             {/* CTA Group */}

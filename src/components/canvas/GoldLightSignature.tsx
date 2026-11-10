@@ -92,3 +92,4 @@ export const GoldLightSignature: React.FC = () => {
     </div>
   );
 };
+

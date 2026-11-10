@@ -36,3 +36,4 @@ This project incorporates and adapts techniques and patterns from the following 
 
 ---
 All other code and designs are original works for Techfest, IIT Bombay — 30th Edition.
+

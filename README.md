@@ -70,3 +70,4 @@ npx playwright test
 ## 📜 Third-Party Notices & Attributions
 
 See [`THIRD_PARTY_NOTICES.md`](./THIRD_PARTY_NOTICES.md) for licenses and attributions regarding `basmilius/sparkle` (MIT), `tsparticles` (MIT), `jaydickinson/free-gsap-effects` (MIT), and `canvas-confetti` (ISC).
+

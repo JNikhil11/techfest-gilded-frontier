@@ -64,3 +64,4 @@ HTMLCanvasElement.prototype.getContext = function (contextId: string) {
   }
   return null;
 } as unknown as HTMLCanvasElement['getContext'];
+

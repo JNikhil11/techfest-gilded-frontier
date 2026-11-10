@@ -19,3 +19,4 @@ reviews:
         6. Verify that Canvas and GSAP animations respect prefers-reduced-motion and clean up listeners on unmount.
 chat:
   auto_reply: true
+

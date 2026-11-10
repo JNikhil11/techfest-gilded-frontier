@@ -209,3 +209,4 @@ export const GoldSparkleCanvas: React.FC<GoldSparkleCanvasProps> = ({
     />
   );
 };
+

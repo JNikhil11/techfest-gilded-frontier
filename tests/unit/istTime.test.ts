@@ -15,7 +15,7 @@ describe('Asia/Kolkata IST Countdown Engine', () => {
     expect(result.formattedIstTarget).toContain('December 16, 2026');
   });
 
-  it('calculates exact countdown 1 hour before Grand Finale', () => {
+  it('calculates exact countdown 1 hour before Grand Finale opening day', () => {
     const oneHourBefore = IST_FINALE_START_MS - 3600 * 1000;
     const result = calculateIstCountdown(oneHourBefore);
 
@@ -26,7 +26,7 @@ describe('Asia/Kolkata IST Countdown Engine', () => {
     expect(result.seconds).toBe(0);
   });
 
-  it('returns LIVE during festival dates (Dec 16 09:00 to Dec 18 22:00 IST)', () => {
+  it('returns LIVE during festival dates (Dec 16 to Dec 18 IST)', () => {
     // Dec 17, 2026 14:00 IST
     const mockLive = Date.parse('2026-12-17T14:00:00+05:30');
     const result = calculateIstCountdown(mockLive);
@@ -35,7 +35,7 @@ describe('Asia/Kolkata IST Countdown Engine', () => {
     expect(result.days).toBe(0);
   });
 
-  it('returns CONCLUDED after Dec 18, 2026 22:00 IST', () => {
+  it('returns CONCLUDED after Dec 18, 2026 23:59:59 IST', () => {
     const mockConcluded = IST_FINALE_END_MS + 1000;
     const result = calculateIstCountdown(mockConcluded);
 

@@ -55,3 +55,4 @@ if (hasErrors) {
   console.log('\nStatic analysis check PASSED: Zero forbidden 3D imports, zero pseudo-technical clutter, zero dead anchor links.');
   process.exit(0);
 }
+

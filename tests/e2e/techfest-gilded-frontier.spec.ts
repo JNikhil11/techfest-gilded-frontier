@@ -18,6 +18,7 @@ test.describe('TECHFEST IIT BOMBAY — THE GILDED FRONTIER E2E VERIFICATION', ()
 
     await page.goto('/');
     await expect(page.locator('h1')).toContainText('The Gilded Frontier');
+    await expect(page.locator('#top')).toContainText('An Aetherial Renaissance');
 
     const bgColor = await page.evaluate(() => {
       return window.getComputedStyle(document.body).backgroundColor;

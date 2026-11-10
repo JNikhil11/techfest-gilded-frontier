@@ -1,9 +1,16 @@
+/**
+ * Verified Factual Corpus & Live 2026–2027 Programme Data Dictionary
+ * Primary Official Source: https://techfest.org/
+ * Verification Timestamp: 2026-11-10T18:30:00+05:30
+ */
+
 export interface FestivalMetadata {
   edition: string;
   editionNumber: number;
+  officialTheme: string;
+  creativeArtDirection: string;
   tagline: string;
-  creativeTheme: string;
-  officialSiteThemeNote: string;
+  durationDisplay: string;
   dates: {
     finalsDisplay: string;
     finalsStartISO: string; // Asia/Kolkata
@@ -24,19 +31,21 @@ export interface FestivalMetadata {
     label: string;
     context: string;
     sourceUrl: string;
+    verifiedAt: string;
   }>;
 }
 
 export const TECHFEST_METADATA: FestivalMetadata = {
   edition: "30th Edition",
   editionNumber: 30,
+  officialTheme: "An Aetherial Renaissance",
+  creativeArtDirection: "The Gilded Frontier",
   tagline: "Asia's Largest Science and Technology Festival",
-  creativeTheme: "The Gilded Frontier",
-  officialSiteThemeNote: "An Aetherial Renaissance — 30 Years of Scientific & Technological Excellence",
+  durationDisplay: "3 Days • December 16–18, 2026",
   dates: {
     finalsDisplay: "December 16–18, 2026",
-    finalsStartISO: "2026-12-16T09:00:00+05:30",
-    finalsEndISO: "2026-12-18T22:00:00+05:30",
+    finalsStartISO: "2026-12-16T00:00:00+05:30",
+    finalsEndISO: "2026-12-18T23:59:59+05:30",
     accommodationWindow: "December 15, 2026 (6:00 AM IST) – December 19, 2026 (10:00 AM IST)",
     twmunDates: "December 17–18, 2026"
   },
@@ -53,25 +62,29 @@ export const TECHFEST_METADATA: FestivalMetadata = {
       value: "30th",
       label: "Milestone Edition",
       context: "Three decades of pioneering science, engineering, and innovation at IIT Bombay.",
-      sourceUrl: "https://ca.techfest.org/"
+      sourceUrl: "https://ca.techfest.org/",
+      verifiedAt: "2026-11-10"
     },
     {
       value: "1,80,000+",
       label: "Annual Footfall",
       context: "Students, researchers, industry leaders, and visitors converging at the Powai campus.",
-      sourceUrl: "https://techfest.org/"
+      sourceUrl: "https://techfest.org/",
+      verifiedAt: "2026-11-10"
     },
     {
       value: "35,000+",
       label: "Competition Participants",
       context: "Competing across regional city zonals and international qualifiers from 20+ nations.",
-      sourceUrl: "https://techfest.org/competitions"
+      sourceUrl: "https://techfest.org/competitions",
+      verifiedAt: "2026-11-10"
     },
     {
       value: "20+",
       label: "Participating Countries",
       context: "Global representation across International Robowars, IRC, TWMUN, and autonomous racing.",
-      sourceUrl: "https://techfest.org/"
+      sourceUrl: "https://techfest.org/",
+      verifiedAt: "2026-11-10"
     }
   ]
 };
@@ -89,6 +102,8 @@ export interface CompetitionItem {
   scoringOrRulesSummary?: string;
   exploreUrl: string;
   registerUrl: string;
+  sourceUrl: string;
+  verifiedAt: string;
   contactPerson?: {
     name: string;
     email: string;
@@ -109,11 +124,13 @@ export const VERIFIED_COMPETITIONS: CompetitionItem[] = [
     technicalHighlights: [
       "Bot dimensions must fit within 220mm x 220mm x 220mm; onboard power max 24V DC.",
       "Red indicator LED must illuminate upon reaching the end zone; maximum 3 restarts allowed.",
-      "Open to students across institutions; top 5 teams per zonal advance to IIT Bombay Finals (Dec 16–18, 2026)."
+      "Top teams per zonal advance to IIT Bombay Finals (Dec 16–18, 2026)."
     ],
     scoringOrRulesSummary: "Total Score = A (25 × checkpoints) + B (30 if Dry Run completed) + C (180 - Dry Run sec) + S (30 if shortest path) + L (5 if LED glows) + T (150 - Actual Run sec) - Penalties.",
     exploreUrl: "https://techfest.org/competitions/meshmerize",
     registerUrl: "https://techfest.org/competitions/meshmerize",
+    sourceUrl: "https://techfest.org/competitions/meshmerize",
+    verifiedAt: "2026-11-10",
     contactPerson: {
       name: "Harshil Anjara",
       email: "harshiltechfest08@gmail.com",
@@ -137,6 +154,8 @@ export const VERIFIED_COMPETITIONS: CompetitionItem[] = [
     scoringOrRulesSummary: "Scored on Core Feature Completion (50 pts), Interactivity (15 pts), Visual Clarity (15 pts), Error-Free Execution (10 pts), and Creativity (10 pts), minus prompt-efficiency deductions.",
     exploreUrl: "https://techfest.org/competitions/zero-code",
     registerUrl: "https://techfest.org/competitions/zero-code",
+    sourceUrl: "https://techfest.org/competitions/zero-code",
+    verifiedAt: "2026-11-10",
     contactPerson: {
       name: "Siddhi Jain",
       email: "siddhi@techfest.org",
@@ -158,7 +177,9 @@ export const VERIFIED_COMPETITIONS: CompetitionItem[] = [
       "Live registration open on the official Techfest Competitions portal."
     ],
     exploreUrl: "https://techfest.org/competitions",
-    registerUrl: "https://techfest.org/competitions"
+    registerUrl: "https://techfest.org/competitions",
+    sourceUrl: "https://techfest.org/competitions",
+    verifiedAt: "2026-11-10"
   },
   {
     id: "national-aeromodelling",
@@ -175,7 +196,9 @@ export const VERIFIED_COMPETITIONS: CompetitionItem[] = [
       "On-site flight finals at IIT Bombay during December 16–18, 2026."
     ],
     exploreUrl: "https://techfest.org/competitions",
-    registerUrl: "https://techfest.org/competitions"
+    registerUrl: "https://techfest.org/competitions",
+    sourceUrl: "https://techfest.org/competitions",
+    verifiedAt: "2026-11-10"
   },
   {
     id: "ayushtech-innovate",
@@ -192,7 +215,9 @@ export const VERIFIED_COMPETITIONS: CompetitionItem[] = [
       "Open to student developers and AI researchers nationwide."
     ],
     exploreUrl: "https://techfest.org/competitions",
-    registerUrl: "https://techfest.org/competitions"
+    registerUrl: "https://techfest.org/competitions",
+    sourceUrl: "https://techfest.org/competitions",
+    verifiedAt: "2026-11-10"
   },
   {
     id: "trueforge-vscode-agent",
@@ -208,7 +233,9 @@ export const VERIFIED_COMPETITIONS: CompetitionItem[] = [
       "Evaluated on AST-aware context retrieval, multi-file transactional diffs, and sub-second cancellation UX."
     ],
     exploreUrl: "https://techfest.org/competitions",
-    registerUrl: "https://techfest.org/competitions"
+    registerUrl: "https://techfest.org/competitions",
+    sourceUrl: "https://techfest.org/competitions",
+    verifiedAt: "2026-11-10"
   },
   {
     id: "spherical-bot-challenge",
@@ -224,7 +251,9 @@ export const VERIFIED_COMPETITIONS: CompetitionItem[] = [
       "12 high-friction, incline, and narrow-bridge obstacles."
     ],
     exploreUrl: "https://techfest.org/competitions",
-    registerUrl: "https://techfest.org/competitions"
+    registerUrl: "https://techfest.org/competitions",
+    sourceUrl: "https://techfest.org/competitions",
+    verifiedAt: "2026-11-10"
   },
   {
     id: "innovatex-future-habitats",
@@ -240,7 +269,9 @@ export const VERIFIED_COMPETITIONS: CompetitionItem[] = [
       "Evaluated on technical feasibility, lifecycle impact, and economic viability."
     ],
     exploreUrl: "https://techfest.org/competitions",
-    registerUrl: "https://techfest.org/competitions"
+    registerUrl: "https://techfest.org/competitions",
+    sourceUrl: "https://techfest.org/competitions",
+    verifiedAt: "2026-11-10"
   },
   {
     id: "meity-cycloidal-rotor",
@@ -256,7 +287,9 @@ export const VERIFIED_COMPETITIONS: CompetitionItem[] = [
       "Computational fluid dynamics (CFD) and structural CAE verification."
     ],
     exploreUrl: "https://techfest.org/competitions",
-    registerUrl: "https://techfest.org/competitions"
+    registerUrl: "https://techfest.org/competitions",
+    sourceUrl: "https://techfest.org/competitions",
+    verifiedAt: "2026-11-10"
   },
   {
     id: "meity-drone-forensics",
@@ -272,7 +305,9 @@ export const VERIFIED_COMPETITIONS: CompetitionItem[] = [
       "Up to INR 25.5 Lakhs in milestone-linked development grants."
     ],
     exploreUrl: "https://techfest.org/competitions",
-    registerUrl: "https://techfest.org/competitions"
+    registerUrl: "https://techfest.org/competitions",
+    sourceUrl: "https://techfest.org/competitions",
+    verifiedAt: "2026-11-10"
   },
   {
     id: "code-auditor-ai-debug",
@@ -288,7 +323,9 @@ export const VERIFIED_COMPETITIONS: CompetitionItem[] = [
       "INR 3,80,000 prize pool."
     ],
     exploreUrl: "https://techfest.org/competitions",
-    registerUrl: "https://techfest.org/competitions"
+    registerUrl: "https://techfest.org/competitions",
+    sourceUrl: "https://techfest.org/competitions",
+    verifiedAt: "2026-11-10"
   },
   {
     id: "mhi-icat-ev-sustainability",
@@ -304,7 +341,9 @@ export const VERIFIED_COMPETITIONS: CompetitionItem[] = [
       "INR 3,50,000 prize pool."
     ],
     exploreUrl: "https://techfest.org/competitions",
-    registerUrl: "https://techfest.org/competitions"
+    registerUrl: "https://techfest.org/competitions",
+    sourceUrl: "https://techfest.org/competitions",
+    verifiedAt: "2026-11-10"
   }
 ];
 
@@ -318,6 +357,8 @@ export interface WorkshopItem {
   description: string;
   exploreUrl: string;
   registerUrl: string;
+  sourceUrl: string;
+  verifiedAt: string;
 }
 
 export const VERIFIED_WORKSHOPS: WorkshopItem[] = [
@@ -331,7 +372,9 @@ export const VERIFIED_WORKSHOPS: WorkshopItem[] = [
     badge: "Earn 2 Certificates • FESTIVE10 Eligible",
     description: "Comprehensive dual-certification track mastering neural architectures, supervised/unsupervised pipelines, and real-world model deployment.",
     exploreUrl: "https://techfest.org/workshops",
-    registerUrl: "https://techfest.org/workshops"
+    registerUrl: "https://techfest.org/workshops",
+    sourceUrl: "https://techfest.org/workshops",
+    verifiedAt: "2026-11-10"
   },
   {
     id: "combo-drone-robotics",
@@ -342,7 +385,9 @@ export const VERIFIED_WORKSHOPS: WorkshopItem[] = [
     badge: "Earn 2 Certificates • Hardware Intensive",
     description: "Full-spectrum aerial robotics and mechatronics dual build program covering flight controllers, kinematics, sensor fusion, and autonomous navigation.",
     exploreUrl: "https://techfest.org/workshops",
-    registerUrl: "https://techfest.org/workshops"
+    registerUrl: "https://techfest.org/workshops",
+    sourceUrl: "https://techfest.org/workshops",
+    verifiedAt: "2026-11-10"
   },
   {
     id: "combo-dl-ml",
@@ -353,7 +398,9 @@ export const VERIFIED_WORKSHOPS: WorkshopItem[] = [
     badge: "Earn 2 Certificates",
     description: "From classical statistical learning to multi-layer perceptrons, CNNs, transformers, and production gradient optimization.",
     exploreUrl: "https://techfest.org/workshops",
-    registerUrl: "https://techfest.org/workshops"
+    registerUrl: "https://techfest.org/workshops",
+    sourceUrl: "https://techfest.org/workshops",
+    verifiedAt: "2026-11-10"
   },
   {
     id: "combo-hacking-cloud",
@@ -364,7 +411,9 @@ export const VERIFIED_WORKSHOPS: WorkshopItem[] = [
     badge: "Earn 2 Certificates",
     description: "Offensive penetration testing methodologies paired with resilient, zero-trust cloud infrastructure architecture.",
     exploreUrl: "https://techfest.org/workshops",
-    registerUrl: "https://techfest.org/workshops"
+    registerUrl: "https://techfest.org/workshops",
+    sourceUrl: "https://techfest.org/workshops",
+    verifiedAt: "2026-11-10"
   },
   {
     id: "combo-ent-analytics",
@@ -375,7 +424,9 @@ export const VERIFIED_WORKSHOPS: WorkshopItem[] = [
     badge: "Earn 2 Certificates",
     description: "Venture creation, unit economics, and data-driven decision modeling for technical founders and product leaders.",
     exploreUrl: "https://techfest.org/workshops",
-    registerUrl: "https://techfest.org/workshops"
+    registerUrl: "https://techfest.org/workshops",
+    sourceUrl: "https://techfest.org/workshops",
+    verifiedAt: "2026-11-10"
   },
   {
     id: "combo-anim-uiux",
@@ -386,7 +437,9 @@ export const VERIFIED_WORKSHOPS: WorkshopItem[] = [
     badge: "Earn 2 Certificates",
     description: "Human-centered interface systems, interactive prototyping, and motion design principles.",
     exploreUrl: "https://techfest.org/workshops",
-    registerUrl: "https://techfest.org/workshops"
+    registerUrl: "https://techfest.org/workshops",
+    sourceUrl: "https://techfest.org/workshops",
+    verifiedAt: "2026-11-10"
   },
 
   // AI & DATA
@@ -399,7 +452,9 @@ export const VERIFIED_WORKSHOPS: WorkshopItem[] = [
     badge: "Flagship 2026 Track",
     description: "Architect tool-calling autonomous agents, memory graphs, deterministic evaluation harnesses, and multi-agent production workflows.",
     exploreUrl: "https://techfest.org/workshops",
-    registerUrl: "https://techfest.org/workshops"
+    registerUrl: "https://techfest.org/workshops",
+    sourceUrl: "https://techfest.org/workshops",
+    verifiedAt: "2026-11-10"
   },
   {
     id: "ws-artificial-intelligence",
@@ -409,7 +464,9 @@ export const VERIFIED_WORKSHOPS: WorkshopItem[] = [
     originalPriceINR: 2299,
     description: "Foundational to advanced AI search, knowledge representation, neural networks, and applied generative models.",
     exploreUrl: "https://techfest.org/workshops",
-    registerUrl: "https://techfest.org/workshops"
+    registerUrl: "https://techfest.org/workshops",
+    sourceUrl: "https://techfest.org/workshops",
+    verifiedAt: "2026-11-10"
   },
   {
     id: "ws-llms-python",
@@ -419,7 +476,9 @@ export const VERIFIED_WORKSHOPS: WorkshopItem[] = [
     originalPriceINR: 2199,
     description: "Tokenization, transformer attention internals, RAG pipelines, fine-tuning (LoRA/QLoRA), and inference optimization in Python.",
     exploreUrl: "https://techfest.org/workshops",
-    registerUrl: "https://techfest.org/workshops"
+    registerUrl: "https://techfest.org/workshops",
+    sourceUrl: "https://techfest.org/workshops",
+    verifiedAt: "2026-11-10"
   },
   {
     id: "ws-data-science",
@@ -429,7 +488,9 @@ export const VERIFIED_WORKSHOPS: WorkshopItem[] = [
     originalPriceINR: 2199,
     description: "Exploratory statistical analysis, feature engineering, predictive modeling, and high-dimensional visualization.",
     exploreUrl: "https://techfest.org/workshops",
-    registerUrl: "https://techfest.org/workshops"
+    registerUrl: "https://techfest.org/workshops",
+    sourceUrl: "https://techfest.org/workshops",
+    verifiedAt: "2026-11-10"
   },
   {
     id: "ws-prompt-engineering",
@@ -439,7 +500,9 @@ export const VERIFIED_WORKSHOPS: WorkshopItem[] = [
     originalPriceINR: 2199,
     description: "Structured reasoning chains, few-shot calibration, schema enforcement, and adversarial prompt defense.",
     exploreUrl: "https://techfest.org/workshops",
-    registerUrl: "https://techfest.org/workshops"
+    registerUrl: "https://techfest.org/workshops",
+    sourceUrl: "https://techfest.org/workshops",
+    verifiedAt: "2026-11-10"
   },
 
   // ENGINEERING & ROBOTICS
@@ -452,7 +515,9 @@ export const VERIFIED_WORKSHOPS: WorkshopItem[] = [
     badge: "Hands-On Hardware Kit",
     description: "Kinematics, microcontroller programming, motor driver actuation, and autonomous sensor integration.",
     exploreUrl: "https://techfest.org/workshops",
-    registerUrl: "https://techfest.org/workshops"
+    registerUrl: "https://techfest.org/workshops",
+    sourceUrl: "https://techfest.org/workshops",
+    verifiedAt: "2026-11-10"
   },
   {
     id: "ws-drone-tech",
@@ -463,7 +528,9 @@ export const VERIFIED_WORKSHOPS: WorkshopItem[] = [
     badge: "Hands-On Aerial Build",
     description: "Multi-rotor aerodynamics, flight dynamics, ESC calibration, telemetry, and autonomous waypoint missions.",
     exploreUrl: "https://techfest.org/workshops",
-    registerUrl: "https://techfest.org/workshops"
+    registerUrl: "https://techfest.org/workshops",
+    sourceUrl: "https://techfest.org/workshops",
+    verifiedAt: "2026-11-10"
   },
   {
     id: "ws-iot-arduino-rpi",
@@ -474,7 +541,9 @@ export const VERIFIED_WORKSHOPS: WorkshopItem[] = [
     badge: "Edge AI + Hardware",
     description: "Gain hands-on experience building complete IoT systems with Arduino and Raspberry Pi, covering sensors, connectivity, cloud dashboards, and Edge AI.",
     exploreUrl: "https://techfest.org/workshops",
-    registerUrl: "https://techfest.org/workshops"
+    registerUrl: "https://techfest.org/workshops",
+    sourceUrl: "https://techfest.org/workshops",
+    verifiedAt: "2026-11-10"
   },
 
   // TECHNOLOGY & CYBERSECURITY
@@ -486,7 +555,9 @@ export const VERIFIED_WORKSHOPS: WorkshopItem[] = [
     originalPriceINR: 1999,
     description: "Modern reactive frontend architectures, scalable REST/GraphQL APIs, relational/NoSQL persistence, and cloud deployment.",
     exploreUrl: "https://techfest.org/workshops",
-    registerUrl: "https://techfest.org/workshops"
+    registerUrl: "https://techfest.org/workshops",
+    sourceUrl: "https://techfest.org/workshops",
+    verifiedAt: "2026-11-10"
   },
   {
     id: "ws-ethical-hacking",
@@ -496,7 +567,9 @@ export const VERIFIED_WORKSHOPS: WorkshopItem[] = [
     originalPriceINR: 2199,
     description: "Reconnaissance, network vulnerability assessment, OWASP Top 10 exploitation, and defensive hardening.",
     exploreUrl: "https://techfest.org/workshops",
-    registerUrl: "https://techfest.org/workshops"
+    registerUrl: "https://techfest.org/workshops",
+    sourceUrl: "https://techfest.org/workshops",
+    verifiedAt: "2026-11-10"
   },
   {
     id: "ws-electric-vehicles",
@@ -506,7 +579,9 @@ export const VERIFIED_WORKSHOPS: WorkshopItem[] = [
     originalPriceINR: 2299,
     description: "Battery Management Systems (BMS), traction motors, power electronics converters, and EV powertrain simulation.",
     exploreUrl: "https://techfest.org/workshops",
-    registerUrl: "https://techfest.org/workshops"
+    registerUrl: "https://techfest.org/workshops",
+    sourceUrl: "https://techfest.org/workshops",
+    verifiedAt: "2026-11-10"
   },
 
   // BUSINESS, FINANCE & MANAGEMENT
@@ -519,7 +594,9 @@ export const VERIFIED_WORKSHOPS: WorkshopItem[] = [
     badge: "Includes Free Festival Pass",
     description: "Quantitative market microstructure, backtesting engines, statistical arbitrage, and automated execution risk controls.",
     exploreUrl: "https://techfest.org/workshops/algo-trading",
-    registerUrl: "https://techfest.org/workshops/algo-trading"
+    registerUrl: "https://techfest.org/workshops/algo-trading",
+    sourceUrl: "https://techfest.org/workshops/algo-trading",
+    verifiedAt: "2026-11-10"
   },
   {
     id: "ws-entrepreneurship",
@@ -529,7 +606,9 @@ export const VERIFIED_WORKSHOPS: WorkshopItem[] = [
     originalPriceINR: 1999,
     description: "Zero-to-one product validation, venture fundraising mechanics, cap table structuring, and go-to-market execution.",
     exploreUrl: "https://techfest.org/workshops",
-    registerUrl: "https://techfest.org/workshops"
+    registerUrl: "https://techfest.org/workshops",
+    sourceUrl: "https://techfest.org/workshops",
+    verifiedAt: "2026-11-10"
   },
   {
     id: "ws-stock-market",
@@ -539,7 +618,9 @@ export const VERIFIED_WORKSHOPS: WorkshopItem[] = [
     originalPriceINR: 2199,
     description: "Fundamental valuation (DCF), financial statement forensics, technical charting, and portfolio construction.",
     exploreUrl: "https://techfest.org/workshops",
-    registerUrl: "https://techfest.org/workshops"
+    registerUrl: "https://techfest.org/workshops",
+    sourceUrl: "https://techfest.org/workshops",
+    verifiedAt: "2026-11-10"
   }
 ];
 
@@ -552,6 +633,8 @@ export const SPECIAL_EXPERIENCES_DATA = {
     regularPriceINR: 1299,
     dates: "December 16–18, 2026",
     url: "https://techfest.org/summit",
+    sourceUrl: "https://techfest.org/summit",
+    verifiedAt: "2026-11-10",
     description: "Techfest's premier global leadership conclave bringing together technology executives, AI pioneers, quantitative researchers, and policymakers. Past editions have hosted luminaries including Dr. A.P.J. Abdul Kalam, Rakesh Sharma (India's first astronaut), ISRO Chairman S. Somanath, and Akash Ambani."
   },
   robowars: {
@@ -559,12 +642,16 @@ export const SPECIAL_EXPERIENCES_DATA = {
     weightCategories: ["8 KGS", "15 KGS", "30 KGS", "60 KGS"],
     spectators: "20,000+ Live Arena Spectators",
     url: "https://techfest.org/robowars",
+    sourceUrl: "https://techfest.org/robowars",
+    verifiedAt: "2026-11-10",
     description: "India's largest and most celebrated combat robotics spectacle. Armored kinetic machines engineered by international and national teams clash inside a bulletproof arena with spinning drums, pneumatic flippers, and hydraulic crushers."
   },
   twmun: {
     title: "Techfest World MUN (TWMUN)",
     dates: "December 17–18, 2026",
     url: "https://techfest.org/twmun",
+    sourceUrl: "https://techfest.org/twmun",
+    verifiedAt: "2026-11-10",
     description: "A two-day international diplomatic conference at IIT Bombay tackling science policy, cyber warfare governance, outer-space treaties, and global socioeconomic security."
   },
   ignite: {
@@ -582,12 +669,16 @@ export const SPECIAL_EXPERIENCES_DATA = {
         perks: "Institutional co-branding, National Leadership Summit delegate invitations, and Convocation Hall VIP recognition at IIT Bombay."
       }
     ],
-    url: "https://techfest.org/ignite"
+    url: "https://techfest.org/ignite",
+    sourceUrl: "https://techfest.org/ignite",
+    verifiedAt: "2026-11-10"
   },
   caProgram: {
     title: "Campus Ambassador (CA) Program",
     domains: ["Creatives", "Web", "Marketing", "Events", "Social Outreach", "Media and Publicity"],
     url: "https://ca.techfest.org/",
+    sourceUrl: "https://ca.techfest.org/",
+    verifiedAt: "2026-11-10",
     description: "Be the official representative of Asia's largest Science & Technology festival on your campus. Gain industry exposure, hands-on campaign leadership, and verified IIT Bombay credentials."
   },
   accommodation: {
@@ -597,7 +688,9 @@ export const SPECIAL_EXPERIENCES_DATA = {
     duration: "4 Days & 4 Nights (Dec 15, 6:00 AM – Dec 19, 10:00 AM IST)",
     groupDiscounts: "Flat ₹150 off for groups > 4 people | Flat ₹300 off for groups > 12 people (Max group size: 20)",
     location: "Inside IIT Bombay Campus, Powai, Mumbai (First-Come, First-Served)",
-    url: "https://techfest.org/accommodation"
+    url: "https://techfest.org/accommodation",
+    sourceUrl: "https://techfest.org/accommodation",
+    verifiedAt: "2026-11-10"
   },
   verifiedContacts: [
     { role: "Workshops Coordinator", name: "Aryan Tamboli", phone: "+91 9702276874", email: "aryan@techfest.org" },

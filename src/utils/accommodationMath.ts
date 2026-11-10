@@ -48,3 +48,4 @@ export function calculateAccommodationQuote(guestsInput: number): AccommodationQ
     tierLabel,
   };
 }
+

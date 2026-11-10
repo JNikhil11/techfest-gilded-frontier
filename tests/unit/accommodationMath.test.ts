@@ -56,3 +56,4 @@ describe('Accommodation Math & Group Discount Tiers', () => {
     expect(quote.totalSavings).toBe(expectedSavings);
   });
 });
+

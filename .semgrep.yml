@@ -21,3 +21,4 @@ rules:
     message: "FUNCTIONAL VIOLATION: Dead placeholder links (href='#') are forbidden. Use real section IDs or verified https://techfest.org URLs."
     languages: [typescript, javascript, html]
     severity: ERROR
+

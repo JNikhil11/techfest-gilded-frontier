@@ -19,6 +19,8 @@ describe('Verified Factual Corpus & Data Dictionary Integrity', () => {
       expect(comp.prizeValueNumeric).toBeGreaterThan(0);
       expect(comp.exploreUrl).toMatch(/^https:\/\/techfest\.org/);
       expect(comp.registerUrl).toMatch(/^https:\/\/techfest\.org/);
+      expect(comp.sourceUrl).toMatch(/^https:\/\/techfest\.org/);
+      expect(comp.verifiedAt).toBeTruthy();
       expect(['OPEN', 'CLOSED']).toContain(comp.status);
     }
   });
@@ -46,12 +48,16 @@ describe('Verified Factual Corpus & Data Dictionary Integrity', () => {
       expect(ws.currentPriceINR).toBeGreaterThan(0);
       expect(ws.originalPriceINR).toBeGreaterThan(ws.currentPriceINR);
       expect(ws.exploreUrl).toMatch(/^https:\/\/techfest\.org\/workshops/);
+      expect(ws.sourceUrl).toMatch(/^https:\/\/techfest\.org\/workshops/);
+      expect(ws.verifiedAt).toBeTruthy();
     }
   });
 
-  it('verifies metadata dates and venue match 30th Edition at IIT Bombay', () => {
+  it('verifies metadata dates and venue match 30th Edition at IIT Bombay with An Aetherial Renaissance theme', () => {
     expect(TECHFEST_METADATA.edition).toBe('30th Edition');
     expect(TECHFEST_METADATA.editionNumber).toBe(30);
+    expect(TECHFEST_METADATA.officialTheme).toBe('An Aetherial Renaissance');
+    expect(TECHFEST_METADATA.creativeArtDirection).toBe('The Gilded Frontier');
     expect(TECHFEST_METADATA.venue.institution).toContain('IIT Bombay');
     expect(TECHFEST_METADATA.dates.finalsDisplay).toBe('December 16–18, 2026');
     expect(SPECIAL_EXPERIENCES_DATA.summit.earlyBirdPriceINR).toBe(999);
@@ -66,6 +72,7 @@ describe('Rendered DOM & Anti-Regression Invariant Verification', () => {
 
     expect(htmlText).not.toMatch(/\b(SYS\.ACTIVE|SYSTEM ONLINE|SIGNAL \d+%|0[1-9]\s*\/\/\s*[A-Z]+)\b/i);
     expect(htmlText).toContain('The Gilded Frontier');
+    expect(htmlText).toContain('An Aetherial Renaissance');
     expect(htmlText).toContain('Meshmerize');
     expect(htmlText).toContain('ZeroCode');
   });

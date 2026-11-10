@@ -225,3 +225,4 @@ export const SummitAndLeadershipSection: React.FC = () => {
     </section>
   );
 };
+

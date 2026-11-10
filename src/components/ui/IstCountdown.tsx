@@ -39,7 +39,7 @@ export const IstCountdown: React.FC = () => {
   return (
     <div className="flex flex-col items-center">
       <div className="text-eyebrow mb-3 text-center">
-        Countdown to Grand Finale at IIT Bombay (IST)
+        Countdown to Opening Day at IIT Bombay (Asia/Kolkata)
       </div>
       <div className="grid grid-cols-4 gap-3 md:gap-6 text-center">
         <div className="flex flex-col items-center px-3 py-2.5 md:px-5 md:py-3.5 bg-[#FFFEFC] border border-[rgba(198,160,74,0.3)] rounded-xl shadow-[0_4px_12px_rgba(36,34,30,0.03)] min-w-[70px] md:min-w-[90px]">
@@ -79,7 +79,7 @@ export const IstCountdown: React.FC = () => {
         </div>
       </div>
       <div className="text-[11px] text-[#77736A] mt-2 font-sans tracking-wide">
-        Asia/Kolkata (IST • UTC+05:30) • December 16, 2026, 09:00 AM
+        Asia/Kolkata (IST • UTC+05:30) • December 16–18, 2026
       </div>
     </div>
   );

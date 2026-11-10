@@ -34,3 +34,4 @@ export function useGsapEditorialMotion(
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [prefersReduced, ...dependencies]);
 }
+

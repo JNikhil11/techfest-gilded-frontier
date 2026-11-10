@@ -371,3 +371,4 @@ export const CompetitionsSection: React.FC = () => {
     </section>
   );
 };
+
